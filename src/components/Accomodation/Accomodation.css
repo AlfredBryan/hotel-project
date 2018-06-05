@@ -1,0 +1,20 @@
+.accomodation-booking-area {
+    display: flex;
+    width: 84%;
+    background-color: #16181c;
+    height: 150px;
+    margin-left: 8%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.normal-rooms {
+    display: flex;
+    margin-bottom: 100px;
+}
+.room-tag {
+    font-size: 18px;
+    line-height: 38px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 0px;
+}

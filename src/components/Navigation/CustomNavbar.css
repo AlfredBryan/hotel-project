@@ -1,0 +1,28 @@
+nav.navbar,
+.navbar-default {
+    background-color: white !important;
+    line-height: 24px;
+    font-size: 14px;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    position: absolute;
+    
+}
+
+.navbar-default {
+    background-image: none;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    line-height: 24px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: black;
+}
+.navbar-default .navbar-toggle {
+    border-color: white;
+}

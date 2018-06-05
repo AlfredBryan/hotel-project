@@ -1,0 +1,17 @@
+.about-banner-h2 {
+    display: block;
+    font-size: 36px;
+    line-height: 45px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    left: 40%;
+    top: 28%;
+    position: absolute;
+}
+.about-banner {
+    background-image: url("./image/Beach-about.jpg");
+    background-size : cover;
+    width: 100%;
+    height: 70vh;
+}
