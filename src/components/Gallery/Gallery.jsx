@@ -1,34 +1,18 @@
 import React, { Component } from 'react';
 import ImageResults from '../ImageResults/ImageResults';
-import axios from 'axios';
 import { SelectField, MenuItem, TextField } from 'material-ui';
-import './Gallery.css'
+import { onTextChange } from '../../store/actions/index';
+import './Gallery.css';
+import { connect } from 'react-redux';  
 
 
-export default class Gallery extends Component {
-  state = {
-    searchText: '',
-    amount: 15,
-    apiUrl: `https://pixabay.com/api`,
-    apiKey: '9189435-9f1e00129bd25c9bcbe88ef08',
-    images: []
-  };
+class Gallery extends Component {
+  handleTextChange() {
+    this.props.onTextChange();
+  }
+ 
 
-  onTextChange = e => {
-    const val = e.target.value
-    this.setState({ [e.target.name]: val }, () => {
-      if (val === '') {
-        this.setState({ images: [] })
-      } else {
-        axios.get(`${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchText}&image_type=photo&per_page=${this.state.amount}&safesearch=false`)
-          .then(res => this.setState({ images: res.data.hits }))
-          .catch(err => console.log(err));
-      }
-
-    });
-  };
-
-  onAmountChange = (e, index, value) => this.setState({ amount: value })
+  onAmountChange = ( value ) => this.setState({ amount: value })
 
   render() {
     console.log(this.state.images)
@@ -61,7 +45,7 @@ export default class Gallery extends Component {
         </SelectField>
         </div>
         <br />
-        {this.state.images.length > 0 ? (<ImageResults images={this.state.images} />) : null}
+        {this.state.images.length > 0 ? (<ImageResults images={this.props.images} />) : null}
         <br />
 
         <footer className="home-footer">
@@ -156,4 +140,13 @@ export default class Gallery extends Component {
     )
 
   }
+};
+
+function mapStateToProps(state) {  
+  return {
+    images: state.images
+  };
 }
+
+
+export default connect(mapStateToProps, { onTextChange })(Gallery);

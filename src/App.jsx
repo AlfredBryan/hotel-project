@@ -10,6 +10,7 @@ import Accomodation from './components/Accomodation/Accomodation';
 import Elemests from './components/Elemests/Elemests';
 import Contact from './components/Contact/Contact';
 
+
 class App extends Component {
   render() {
     return (

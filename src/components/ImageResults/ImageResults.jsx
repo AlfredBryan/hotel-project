@@ -6,7 +6,6 @@ import IconButton from 'material-ui/IconButton' ;
 import ZoomIn from 'material-ui/svg-icons/action/zoom-in';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
-import Spinner from '../Spinner/Spinner';
 
 class ImageResults extends Component {
   state = {
@@ -56,9 +55,7 @@ class ImageResults extends Component {
     const actions = [
       <FlatButton label="close" primary={true} onClick={this.handleClose} />
     ]
-    if (this.state.loading) {
-      ImageListContent = <Spinner />;
-    }
+    
 
     return(
       <div>
