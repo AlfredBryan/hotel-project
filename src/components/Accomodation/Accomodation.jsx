@@ -159,7 +159,7 @@ export default class Accomodation extends Component {
                 <input type="text" placeholder="     Email Address" className="footer-input" />
                 <button className="sub-btn">
                 </button>
-              </form>
+              </form> 
             </div>
             <div className="footer-sec4">
               <h6 className="footer-sec4-h6">Instafeed</h6>

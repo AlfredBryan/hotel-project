@@ -1,48 +1,49 @@
 import React, { Component } from 'react';
-import ImageResults from '../ImageResults/ImageResults';
+import { connect } from 'react-redux';
 import { SelectField, MenuItem, TextField } from 'material-ui';
-import { onTextChange } from '../../store/actions/index';
+
+import ImageResults from '../ImageResults/ImageResults';
+import { getImagesRequest } from '../../store/actions';
 import './Gallery.css';
-import { connect } from 'react-redux';  
+
 
 
 class Gallery extends Component {
-  handleTextChange() {
-    this.props.onTextChange();
+  handleTextChange(event) {
+    this.props.getImages(event.target.value);
   }
- 
 
-  onAmountChange = ( value ) => this.setState({ amount: value })
+
+  onAmountChange = (value) => this.setState({ amount: value })
 
   render() {
-    console.log(this.state.images)
     return (
       <div>
         <div className="about-banner">
           <h2 className="about-banner-h2">Gallery</h2>
         </div>
         <div className="search-field">
-        <TextField
-          name="searchText"
-          value={this.state.searchText}
-          floatingLabelText="Search For Images"
-          onChange={this.onTextChange}
-          className="field-text"
-        />
-        <br />
-        <SelectField 
-         name="amount"
-         floatingLabelText="Amount"
-         value={this.state.amount}
-         onChange={this.onAmountChange}
-         className="field-text"
-        >
-        <MenuItem value={5} primaryText="5" />
-        <MenuItem value={10} primaryText="10" />
-        <MenuItem value={15} primaryText="15" />
-        <MenuItem value={30} primaryText="30" />
-        <MenuItem value={50} primaryText="50" />
-        </SelectField>
+          <TextField
+            name="searchText"
+            value={this.state.searchText}
+            floatingLabelText="Search For Images"
+            onChange={this.onTextChange}
+            className="field-text"
+          />
+          <br />
+          <SelectField
+            name="amount"
+            floatingLabelText="Amount"
+            value={this.state.amount}
+            onChange={this.onAmountChange}
+            className="field-text"
+          >
+            <MenuItem value={5} primaryText="5" />
+            <MenuItem value={10} primaryText="10" />
+            <MenuItem value={15} primaryText="15" />
+            <MenuItem value={30} primaryText="30" />
+            <MenuItem value={50} primaryText="50" />
+          </SelectField>
         </div>
         <br />
         {this.state.images.length > 0 ? (<ImageResults images={this.props.images} />) : null}
@@ -142,11 +143,16 @@ class Gallery extends Component {
   }
 };
 
-function mapStateToProps(state) {  
+function mapStateToProps(state) {
   return {
     images: state.images
   };
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    getImages: searchText => dispatch(getImagesRequest(searchText)),
+  };
+};
 
-export default connect(mapStateToProps, { onTextChange })(Gallery);
+export default connect(mapStateToProps, mapDispatchToProps)(Gallery);
