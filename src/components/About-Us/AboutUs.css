@@ -1,0 +1,50 @@
+.about-head {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.about-head1 {
+    align-items: center;
+    margin-left: 100px;
+    flex: 1;
+}
+.about-head-h2 {
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: 600;
+    color: #222222;
+    font-family: "Poppins", sans-serif;
+    display: block;
+}
+.about-head-p {
+    display: block;
+    padding: 18px 0px 30px;
+    color: #777777;
+    font-family: "Poppins", sans-serif;
+}
+.btn-about {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    background: #222222;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px 29px;
+    text-align: center;
+}
+.btn-about:hover {
+    text-decoration: none;
+    border-radius: 0px;
+    z-index: 1;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    overflow: hidden;
+    border: 0px;
+    background: #f3c300;
+    color: #fff;
+}
+
+.about-head2 {
+    flex: 1;
+}

@@ -1,0 +1,128 @@
+.facilities {
+    background-image: url("./image/accomodation.jpg");
+    background-size : cover;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 1.5;
+}
+.fac-title {
+    font-size: 36px;
+    line-height: 45px;
+    font-weight: 600;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+.header2 {
+    text-align: center;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 480px;
+}
+.fac-titlep {
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 0px;
+}
+.fac1 {
+    border: 1px solid #777777;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 255, 0.102);
+    padding: 31px 40px 37px;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 170px;
+    margin-left: 100px;
+}
+.fac2 {
+    border: 1px solid #777777;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 255, 0.102);
+    padding: 31px 40px 37px;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 170px; 
+    margin-left: 50px;
+}
+.fac3 {
+    border: 1px solid #777777;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 255, 0.102);
+    padding: 31px 40px 37px;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 170px;
+    margin-left: 50px;
+}
+
+.hotel-fac {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    position: absolute; 
+    margin-top: 200px;  
+}
+.hotel-fac-2 {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 400px;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.facc1 {
+    border: 1px solid #777777;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 255, 0.102);
+    padding: 31px 40px 37px;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 170px;
+    margin-left: 100px;
+}
+
+.facc2 {
+    border: 1px solid #777777;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 255, 0.102);
+    padding: 31px 40px 37px;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 170px;
+    margin-left: 50px;
+}
+.facc3 {
+    border: 1px solid #777777;
+    border-radius: 10px;
+    background-color: rgba(249, 249, 255, 0.102);
+    padding: 31px 40px 37px;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 350px;
+    height: 170px;
+    margin-left: 50px;
+}
+.fac-h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 0px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center
+
+}
