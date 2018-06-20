@@ -22,6 +22,7 @@ nav.navbar,
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: black;
+    text-align: center;
 }
 .navbar-default .navbar-toggle {
     border-color: white;
