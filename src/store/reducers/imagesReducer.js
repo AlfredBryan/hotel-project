@@ -8,13 +8,19 @@ const initialState = {
   fetching: false,
   images: null,
   searchText: "",
+  amount: null,
   error: null
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case GET_IMAGES_REQUEST:
-      return { ...state, searchText: action.searchText, fetching: true, error: null };
+      return { ...state, 
+        searchText: action.searchText, 
+        amount: action.amount,
+        fetching: true, 
+        error: null 
+      };
     case GET_IMAGES_SUCCESS:
       return { ...state, fetching: false, images: action.images };
     case GET_IMAGES_FAILURE:

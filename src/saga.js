@@ -6,9 +6,8 @@ import { getImagesSuccess, getImagesFailure } from '../src/store/actions';
 // function that makes the api request and returns a Promise for response
 const apiUrl = `https://pixabay.com/api`;
 const apiKey = '9189435-9f1e00129bd25c9bcbe88ef08';
-const amount = 15;
 
-function fetchImages(searchText) {
+function fetchImages(searchText, amount = 15) {
     return axios({
         method: "get",
         url: `${apiUrl}/?key=${apiKey}&q=${searchText}&image_type=photo&per_page=${amount}&safesearch=true`
@@ -23,7 +22,7 @@ export function* watcherSaga() {
 // worker saga: makes the api call when watcher saga sees the action
 function* workerSaga(action) {
     try {
-        const response = yield call(fetchImages, action.searchText);
+        const response = yield call(fetchImages, action.searchText, action.amount);
         const images = response.data;
         yield put(getImagesSuccess(images));
     } catch (error) {
