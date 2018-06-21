@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { SelectField, MenuItem, TextField } from 'material-ui';
+import { SelectField, MenuItem, TextField, } from 'material-ui';
 import Footer from '../Footer/Footer';
-
 import ImageResults from '../ImageResults/ImageResults';
 import { getImagesRequest } from '../../store/actions';
 import './Gallery.css';
@@ -35,6 +34,7 @@ class Gallery extends Component {
   render() {
     const { searchText, amount } = this.state;
     const { images } = this.props;
+
     return (
       <div>
         <div className="about-banner">
@@ -64,10 +64,10 @@ class Gallery extends Component {
               <MenuItem value={50} primaryText="50" />
             </SelectField>
           </div>
-          <button type="submit">Get images</button>
+          <button type="submit" className="btn">Get images</button>
         </form>
         <br />
-        {!images.fetching && images.images ? (<ImageResults images={images.images.hits } />) : null}
+        {!images.fetching && images.images ? (<ImageResults images={images.images.hits} />) : null}
         <br />
         <Footer />
       </div>

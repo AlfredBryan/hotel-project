@@ -135,3 +135,11 @@
     background: #333333;
     margin-top: 30px;
  }
+
+ .pointer {
+    color: #777;
+    margin-left: 500px;
+    margin-top: 20px;
+    font-weight: 500;
+    font-family: 'Lobster', cursive;
+ }

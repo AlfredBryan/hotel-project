@@ -91,6 +91,9 @@ export default class Footer extends Component {
                             </div>
                         </div>
                     </div>
+                    <div className="pointer">
+                            &copy; 2018 works by Bryan                                
+                            </div>
                     <div className="line-breaker"></div>
                 </footer>
             </div>

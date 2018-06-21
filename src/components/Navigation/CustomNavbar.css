@@ -7,7 +7,9 @@ nav.navbar,
     height: 70px;
     position: fixed;
     position: absolute;
-    
+    padding-top: 8px;
+    font-family: "Poppins", sans-serif;
+
 }
 
 .navbar-default {
@@ -19,7 +21,6 @@ nav.navbar,
 .navbar-default .navbar-nav>li>a {
     line-height: 24px;
     font-size: 14px;
-    font-family: "Poppins", sans-serif;
     font-weight: 300;
     color: black;
     text-align: center;
